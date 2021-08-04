@@ -10,6 +10,7 @@ export const findAll = (callback: Function) => {
 
         const rows = <RowDataPacket[]> result;
         const yokais: Yokai[] = [];
+        // const yokais = <Yokai[]> result;  <= これでも動く
 
         rows.forEach(row => {
             const yokai: Yokai = {

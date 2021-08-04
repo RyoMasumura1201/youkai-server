@@ -10,6 +10,6 @@ yokaiRouter.get("/", async (req: Request, res: Response) => {
             return res.status(500).json({"errorMessage" : err.message});
         }
 
-        res.status(200).json({"data": yokais});
+        res.status(200).json(yokais);
     });
 });

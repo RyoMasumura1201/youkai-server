@@ -10,6 +10,7 @@ const findAll = (callback) => {
         }
         const rows = result;
         const yokais = [];
+        // const yokais = <Yokai[]> result;  <= これでも動く
         rows.forEach(row => {
             const yokai = {
                 id: row.id,

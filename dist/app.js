@@ -27,6 +27,11 @@ const express_1 = __importDefault(require("express"));
 const yokaiRouter_1 = require("./routes/yokaiRouter");
 const app = express_1.default();
 dotenv.config();
+app.use((req, res, next) => {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    next();
+});
 app.use(express_1.default.json());
 app.use("/yokais", yokaiRouter_1.yokaiRouter);
 app.listen(process.env.PORT, () => {

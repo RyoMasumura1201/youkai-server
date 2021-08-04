@@ -40,6 +40,6 @@ exports.yokaiRouter.get("/", (req, res) => __awaiter(void 0, void 0, void 0, fun
         if (err) {
             return res.status(500).json({ "errorMessage": err.message });
         }
-        res.status(200).json({ "data": yokais });
+        res.status(200).json(yokais);
     });
 }));
