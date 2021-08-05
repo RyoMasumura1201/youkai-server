@@ -4,7 +4,7 @@ import {Yokai, BasicYokai} from "../types/yokai";
 
 export const yokaiRouter = express.Router();
 
-yokaiRouter.get("/", async (req: Request, res: Response) => {
+yokaiRouter.get("/", (req: Request, res: Response) => {
     yokaiModel.findAll((err: Error, yokais: Yokai[])=>{
         if (err) {
             return res.status(500).json({"errorMessage" : err.message});
